@@ -190,22 +190,22 @@ export function getProject(param) {
           {
             id: 1,
             details:
-              "My main challenge for this project was my lack of experience and skills, which started at the same time as this project, my specialized training in front-end, and this was a difficult experience for me, but really a good goal to challenge and develop my skills. it was me The good thing about this project was that almost most of the content of the front-end field was used, and in addition to the challenge, it was also a good training for me.",
+              "In this project, I faced a major challenge, and my challenge was what to do for the back-end of the project and what method to choose, because I was not a back-end developer, it was really difficult for me to start learning back-end topics in order to find a solution. to arrive But I didn't stop and after a little research and of course help from my good friend Mr. Ghasemzadeh, I was introduced to Telefunc API, which solved my needs well, but there was still a problem, when the server was disconnected, the data was also deleted with it, which should be I managed it using a SQL database.",
           },
           {
             id: 2,
             details:
-              "The next challenge for me was that they gave me a little time, and the styles and graphics of the program were like that.",
+              "It can almost be said that according to the chat project that I did, a series of front-end topics and topics remained, such as making the site multilingual and... well, in this project, almost those remaining topics were also worked on, and it was a very good experience after the project. It brought me chat and I am happy about it.",
           },
           {
             id: 3,
             details:
-              "But finally, after three weeks passed after my specialized training, I finished this project and you can see the output.",
+              "Of course, there are a few minor things left, such as adding animations for movements, etc., which I will gradually complete and finally create a complete and neat project and deliver it.",
           },
           {
             id: 4,
             details:
-              "But this project taught me a very good lesson, even though I had taken a new step in the front-end field, this project included most of the front-end topics and I gained good experience in these fields at first.",
+              "Finally, after the complete completion of the project, I plan to make a PW version of the project and publish it in the Android and Windows versions in order to pass on this good experience of systematizing the scoring of sprints to others.",
           },
         ],
         socialSharingsHeading: "Share This",
