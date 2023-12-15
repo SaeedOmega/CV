@@ -9,24 +9,24 @@ export const socialLinks = [
     id: 2,
     name: "GitHub",
     icon: "github",
-    url: "https://github.com/realstoman",
+    url: "https://github.com/SaeedOmega",
   },
   {
     id: 3,
     name: "Telegram",
     icon: "send",
-    url: "https://twitter.com/realstoman",
+    url: "https://t.me/Saeed_Omega",
   },
   {
     id: 4,
     name: "LinkedIn",
     icon: "linkedin",
-    url: "https://www.linkedin.com/in/realstoman",
+    url: "https://www.linkedin.com/in/saeed-saadatifar",
   },
   {
     id: 5,
     name: "Instagram",
     icon: "instagram",
-    url: "https://www.youtube.com/c/realstoman",
+    url: "https://instagram.com/saeed.omega",
   },
 ];

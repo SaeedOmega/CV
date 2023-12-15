@@ -19,7 +19,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
     meta: {
-      title: "Stoman - About",
+      title: "Saeed - About",
     },
   },
   {
@@ -31,11 +31,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue"),
     meta: {
-      title: "Stoman - Projects",
+      title: "Saeed - Projects",
     },
   },
   {
-    path: "/projects/single-project",
+    path: "/projects/:projectName",
     name: "Single Project",
     // route level code-splitting
     // this generates a separate chunk (projects.[hash].js) for this route
@@ -43,7 +43,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/SingleProject.vue"),
     meta: {
-      title: "Stoman - Single Project",
+      title: "Saeed - Single Project",
     },
   },
   {
@@ -55,7 +55,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Contact.vue"),
     meta: {
-      title: "Stoman - Contact",
+      title: "Saeed - Contact",
     },
   },
 ];

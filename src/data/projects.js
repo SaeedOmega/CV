@@ -7,6 +7,14 @@ const projects = [
     title: "Omega Messenger",
     category: "Web Application",
     img: require("@/assets/images/web-project-3.jpg"),
+    path: "omegaMessenger",
+  },
+  {
+    id: 2,
+    title: "Scrum Pocker",
+    category: "Web Application",
+    img: require("@/assets/images/web-project-6.jpg"),
+    path: "scrumPocker",
   },
 ];
 
