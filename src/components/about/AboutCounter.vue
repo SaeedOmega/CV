@@ -41,7 +41,9 @@ export default {
         </span>
       </div>
 
-      <div class="text-3xl py-20 flex items-center">
+      <div
+        class="text-3xl py-20 flex items-center text-ternary-dark dark:text-ternary-light"
+      >
         <div>{{ text1 }}</div>
         <div class="font-extrabold text-6xl">&nbsp; {{ text2 }} &nbsp;</div>
         <div>{{ text3 }}</div>
