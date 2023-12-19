@@ -16,6 +16,13 @@ const projects = [
     img: require("@/assets/images/web-project-6.jpg"),
     path: "scrumPocker",
   },
+  {
+    id: 3,
+    title: "ToDo List",
+    category: "Web Application",
+    img: require("@/assets/images/web-project-9.jpg"),
+    path: "toDo-List",
+  },
 ];
 
 export default projects;

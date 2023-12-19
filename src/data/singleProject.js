@@ -243,8 +243,130 @@ export function getProject(param) {
         ],
       },
     },
+    {
+      singleProjectHeader: {
+        singleProjectTitle: "ToDo List",
+        singleProjectDate: "Aug 28, 2023",
+        singleProjectTag: "React / Frontend",
+      },
+      projectImages: [
+        {
+          id: 3,
+          title: "toDo-List",
+          img: require("@/assets/images/web-project-9.jpg"),
+        },
+        {
+          id: 1,
+          title: "toDo-List",
+          img: require("@/assets/images/web-project-10.jpg"),
+        },
+        {
+          id: 2,
+          title: "toDo-List",
+          img: require("@/assets/images/web-project-11.jpg"),
+        },
+      ],
+      projectInfo: {
+        clientHeading: "About Client",
+        companyInfos: [
+          {
+            id: 1,
+            title: "Name",
+            details: "ToDo List",
+          },
+          {
+            id: 2,
+            title: "Services",
+            details: "Frontend",
+          },
+          {
+            id: 3,
+            title: "Website",
+            details: "www.omegaScrumPocker.ir",
+          },
+          {
+            id: 4,
+            title: "Programmer",
+            details: "Saeed Saadatifar",
+          },
+        ],
+        objectivesHeading: "Objective",
+        objectivesDetails:
+          "The purpose of writing this project was to practice more and learn state management for React, which I think turned out to be a good job.",
+        technologies: [
+          {
+            title: "Tools & Technologies",
+            techs: [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "TailwindCss",
+              "ReactJs",
+              "Zustand",
+            ],
+          },
+        ],
+        projectDetailsHeading: "Challenge",
+        projectDetails: [
+          {
+            id: 1,
+            details:
+              "In this project, I faced a major challenge, and my challenge was what to do for the back-end of the project and what method to choose, because I was not a back-end developer, it was really difficult for me to start learning back-end topics in order to find a solution. to arrive But I didn't stop and after a little research and of course help from my good friend Mr. Ghasemzadeh, I was introduced to Telefunc API, which solved my needs well, but there was still a problem, when the server was disconnected, the data was also deleted with it, which should be I managed it using a SQL database.",
+          },
+          {
+            id: 2,
+            details:
+              "It can almost be said that according to the chat project that I did, a series of front-end topics and topics remained, such as making the site multilingual and... well, in this project, almost those remaining topics were also worked on, and it was a very good experience after the project. It brought me chat and I am happy about it.",
+          },
+          {
+            id: 3,
+            details:
+              "Of course, there are a few minor things left, such as adding animations for movements, etc., which I will gradually complete and finally create a complete and neat project and deliver it.",
+          },
+          {
+            id: 4,
+            details:
+              "Finally, after the complete completion of the project, I plan to make a PW version of the project and publish it in the Android and Windows versions in order to pass on this good experience of systematizing the scoring of sprints to others.",
+          },
+        ],
+        socialSharingsHeading: "Share This",
+        socialSharings: [
+          {
+            id: 1,
+            name: "Website",
+            icon: "globe",
+            url: "egamessenger.iran.liara.run/",
+          },
+          {
+            id: 2,
+            name: "GitHub",
+            icon: "github",
+            url: "https://github.com/SaeedOmega",
+          },
+          {
+            id: 3,
+            name: "Telegram",
+            icon: "send",
+            url: "https://t.me/Saeed_Omega",
+          },
+          {
+            id: 4,
+            name: "LinkedIn",
+            icon: "linkedin",
+            url: "https://www.linkedin.com/in/saeed-saadatifar",
+          },
+          {
+            id: 5,
+            name: "Instagram",
+            icon: "instagram",
+            url: "https://instagram.com/saeed.omega",
+          },
+        ],
+      },
+    },
   ];
   if (param === "omegaMessenger") return projects[0];
   else if (param === "scrumPocker") return projects[1];
+  else if (param === "toDo-List") return projects[2];
   return;
 }
