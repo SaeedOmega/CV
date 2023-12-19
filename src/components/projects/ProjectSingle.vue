@@ -14,7 +14,7 @@ export default {
       <img
         :src="project.img"
         :alt="project.title"
-        class="rounded-t-xl border-none"
+        class="rounded-t-xl border-none w-full h-full"
       />
     </div>
     <div class="text-center px-4 py-6">
