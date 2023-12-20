@@ -92,7 +92,7 @@ export function getProject(param) {
             id: 1,
             name: "Website",
             icon: "globe",
-            url: "egamessenger.iran.liara.run/",
+            url: "https://omegamessenger.iran.liara.run",
           },
           {
             id: 2,
@@ -214,7 +214,7 @@ export function getProject(param) {
             id: 1,
             name: "Website",
             icon: "globe",
-            url: "egamessenger.iran.liara.run/",
+            url: "https://omegamessenger.iran.liara.run",
           },
           {
             id: 2,
@@ -282,7 +282,7 @@ export function getProject(param) {
           {
             id: 3,
             title: "Website",
-            details: "www.omegaScrumPocker.ir",
+            details: "www.ToDo-List.ir",
           },
           {
             id: 4,
@@ -311,22 +311,17 @@ export function getProject(param) {
           {
             id: 1,
             details:
-              "In this project, I faced a major challenge, and my challenge was what to do for the back-end of the project and what method to choose, because I was not a back-end developer, it was really difficult for me to start learning back-end topics in order to find a solution. to arrive But I didn't stop and after a little research and of course help from my good friend Mr. Ghasemzadeh, I was introduced to Telefunc API, which solved my needs well, but there was still a problem, when the server was disconnected, the data was also deleted with it, which should be I managed it using a SQL database.",
+              "This project was not a special challenge for me because I had memorized all its topics, but to rehearse the topics, I started such a project.",
           },
           {
             id: 2,
             details:
-              "It can almost be said that according to the chat project that I did, a series of front-end topics and topics remained, such as making the site multilingual and... well, in this project, almost those remaining topics were also worked on, and it was a very good experience after the project. It brought me chat and I am happy about it.",
+              "The only new thing for me in this project was the use of Zastand's state management library, which is really similar to Pinia in the Vue framework, and at the same time, it is very simple and efficient.",
           },
           {
             id: 3,
             details:
-              "Of course, there are a few minor things left, such as adding animations for movements, etc., which I will gradually complete and finally create a complete and neat project and deliver it.",
-          },
-          {
-            id: 4,
-            details:
-              "Finally, after the complete completion of the project, I plan to make a PW version of the project and publish it in the Android and Windows versions in order to pass on this good experience of systematizing the scoring of sprints to others.",
+              "Of course, as you can see, this program is visually and graphically weak, but for me, this project was not strong enough to sit down and develop it, although I may have done so in the future.",
           },
         ],
         socialSharingsHeading: "Share This",
@@ -335,7 +330,7 @@ export function getProject(param) {
             id: 1,
             name: "Website",
             icon: "globe",
-            url: "egamessenger.iran.liara.run/",
+            url: "https://omegamessenger.iran.liara.run",
           },
           {
             id: 2,

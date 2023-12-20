@@ -7,7 +7,7 @@ const routes = [
     name: "Home",
     component: Home,
     meta: {
-      title: "Saeed - Home",
+      title: "Saeed Saadatifar",
     },
   },
   {
