@@ -17,6 +17,7 @@ export default {
       isOpen: false,
       theme: "",
       modal: false,
+      lang: "En",
       categories: [
         {
           id: 1,
@@ -46,6 +47,16 @@ export default {
     showModal() {
       window.open("mailto:SaeedNitro2017@gmail.com");
     },
+    setDir() {
+      if (this.$i18n.locale === "fa") return "rtl";
+      return "ltr";
+    },
+  },
+  watch: {
+    lang(newLang) {
+      if (newLang === "En") this.$i18n.locale = "en";
+      else this.$i18n.locale = "fa";
+    },
   },
   updated() {
     feather.replace();
@@ -57,6 +68,7 @@ export default {
   <nav id="nav" class="sm:container sm:mx-auto">
     <!-- Header start -->
     <div
+      :dir="setDir()"
       class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6"
     >
       <!-- Header menu links and small screen hamburger menu -->
@@ -72,7 +84,7 @@ export default {
             <p
               class="font-medium text-xl font-sans text-primary-dark dark:text-secondary-light"
             >
-              Saeed Saadatifar
+              {{ $t("name") }}
             </p>
           </router-link>
         </div>
@@ -118,8 +130,27 @@ export default {
 
       <!-- Header right section buttons -->
       <div
-        class="hidden sm:flex justify-between items-center flex-col md:flex-row"
+        class="hidden gap-4 sm:flex justify-between items-center flex-col md:flex-row"
       >
+        <div class="flex gap-2 items-center">
+          <img
+            v-if="lang === 'En'"
+            src="../../../public/united-kingdom.png"
+            height="32"
+          />
+          <img
+            v-if="lang === 'فارسی'"
+            src="../../../public/flag.png"
+            width="32"
+          />
+          <select
+            v-model="lang"
+            class="border-none bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl cursor-pointer"
+          >
+            <option>En</option>
+            <option>فارسی</option>
+          </select>
+        </div>
         <!-- Hire me button -->
         <div class="hidden md:block">
           <Button
