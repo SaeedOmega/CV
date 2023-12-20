@@ -25,18 +25,8 @@ export default {
         },
         {
           id: 2,
-          value: "mobile",
-          name: "Mobile Application",
-        },
-        {
-          id: 3,
-          value: "ui-ux",
-          name: "UI/UX Design",
-        },
-        {
-          id: 4,
-          value: "branding",
-          name: "Branding & Anim",
+          value: "web",
+          name: "Mini Project",
         },
       ],
     };
@@ -54,18 +44,7 @@ export default {
       this.theme = theme;
     },
     showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName("html")[0]
-          .classList.remove("overflow-y-hidden");
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName("html")[0]
-          .classList.add("overflow-y-hidden");
-        this.modal = true;
-      }
+      window.open("mailto:SaeedNitro2017@gmail.com");
     },
   },
   updated() {
@@ -144,7 +123,7 @@ export default {
         <!-- Hire me button -->
         <div class="hidden md:block">
           <Button
-            title="Hire Me"
+            title="Send Email"
             class="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
             @click="showModal()"
             aria-label="Hire Me Button"
