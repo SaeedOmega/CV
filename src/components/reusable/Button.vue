@@ -13,4 +13,3 @@ export default {
 	<button>{{ title }}</button>
 </template>
 
-<style lang="scss" scoped></style>

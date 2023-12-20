@@ -31,4 +31,3 @@ export default {
   </router-link>
 </template>
 
-<style lang="scss" scoped></style>
