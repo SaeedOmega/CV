@@ -8,7 +8,7 @@ export default {
     },
     selectOptions: {
       type: Array,
-      default: () => ["Web Application", "Mini Project"],
+      default: () => ["web-application", "mini-project"],
     },
   },
 };
@@ -16,20 +16,23 @@ export default {
 
 <template>
   <select
+    style="font-variation-settings: 'wght' 500"
+    :dir="$i18n.locale.value === 'fa' ? 'rtl' : 'ltr'"
     @change="$emit('filter', $event.target.value)"
     :name="select"
     :id="select"
-    class="font-general-medium px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+    class="font-medium px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
   >
-    <option value class="text-sm sm:text-md">All Projects</option>
+    <option value class="text-sm sm:text-md">
+      {{ $t("all-projects-select") }}
+    </option>
     <option
       v-for="option in selectOptions"
       :key="option"
       :value="option"
       class="sm:text-md"
     >
-      {{ option }}
+      {{ $t(`${option}-select`) }}
     </option>
   </select>
 </template>
-

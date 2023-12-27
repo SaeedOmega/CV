@@ -19,15 +19,16 @@ export default {
     </div>
     <div class="text-center px-4 py-6">
       <p
-        class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
+        style="font-variation-settings: 'wght' 700"
+        class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
       >
-        {{ project.title }}
+        {{ $t(project.title) }}
       </p>
       <span
-        class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light"
-        >{{ project.category }}</span
+        style="font-variation-settings: 'wght' 500"
+        class="font-medium text-lg text-ternary-dark dark:text-ternary-light"
+        >{{ $t(`${project.categoryShow}-select`) }}</span
       >
     </div>
   </router-link>
 </template>
-

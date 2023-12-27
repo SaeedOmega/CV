@@ -6,10 +6,8 @@ export default {
   },
   data: () => {
     return {
-      experienceTitle: "Years of experience",
-      githubTitle: "Stars on GitHub",
-      feedbackTitle: "Positive feedback",
-      projectsTitle: "Projects completed",
+      experienceTitle: "years-of-experience",
+      projectsTitle: "projects-completed",
       text1: "Junior" + "\xa0\xa0\xa0" + "<",
       text2: "Me ",
       text3: "<" + "\xa0\xa0\xa0" + "Senior",
@@ -22,7 +20,7 @@ export default {
   <div class="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
     <!-- About me counters -->
     <div
-      class="font-general-regular container mx-auto py-20 block sm:flex sm:justify-between sm:items-center"
+      class="container mx-auto py-20 block sm:flex sm:justify-between sm:items-center"
     >
       <!-- Years of experience counter -->
       <div class="mb-20 sm:mb-0">
@@ -37,7 +35,7 @@ export default {
           aria-label="About Status Counter"
         />
         <span class="block text-md text-ternary-dark dark:text-ternary-light">
-          {{ experienceTitle }}
+          {{ $t(experienceTitle) }}
         </span>
       </div>
 
@@ -61,7 +59,7 @@ export default {
           class="font-general-medium text-4xl font-bold text-secondary-dark dark:text-secondary-light mb-2"
         />
         <span class="block text-md text-ternary-dark dark:text-ternary-light">
-          {{ projectsTitle }}
+          {{ $t(projectsTitle) }}
         </span>
       </div>
     </div>

@@ -11,15 +11,18 @@ import en from "./locales/en.json";
 
 // configure i18n
 const i18n = createI18n({
-  locale: "en",
-  fallbackLocale: "en",
+  locale: "fa",
+  legacy: false,
+  fallbackLocale: "fa",
   messages: { fa, en },
 });
 
 const feather = require("feather-icons");
 feather.replace();
 
-createApp(App).use(router).use(BackToTop).use(i18n).mount("#app");
+const app = createApp(App);
+
+app.use(router).use(BackToTop).use(i18n).mount("#app");
 
 const appTheme = localStorage.getItem("theme");
 

@@ -1,6 +1,5 @@
 <script>
 import ThemeSwitcher from "../ThemeSwitcher";
-import HireMeModal from "../HireMeModal.vue";
 import feather from "feather-icons";
 import AppHeaderLinks from "./AppHeaderLinks.vue";
 import Button from "../reusable/Button.vue";
@@ -8,7 +7,6 @@ import Button from "../reusable/Button.vue";
 export default {
   components: {
     ThemeSwitcher,
-    HireMeModal,
     AppHeaderLinks,
     Button,
   },
@@ -17,7 +15,6 @@ export default {
       isOpen: false,
       theme: "",
       modal: false,
-      lang: "En",
       categories: [
         {
           id: 1,
@@ -41,6 +38,10 @@ export default {
     this.theme = localStorage.getItem("theme") || "light";
   },
   methods: {
+    onLangClick(event) {
+      this.$i18n.locale = event.target.innerText === "En" ? "en" : "fa";
+      localStorage.lang = this.$i18n.locale;
+    },
     updateTheme(theme) {
       this.theme = theme;
     },
@@ -50,12 +51,6 @@ export default {
     setDir() {
       if (this.$i18n.locale === "fa") return "rtl";
       return "ltr";
-    },
-  },
-  watch: {
-    lang(newLang) {
-      if (newLang === "En") this.$i18n.locale = "en";
-      else this.$i18n.locale = "fa";
     },
   },
   updated() {
@@ -77,7 +72,7 @@ export default {
         <div>
           <router-link class="flex gap-2.5 items-center" to="/"
             ><p
-              class="font-extrabold text-4xl font-sans text-indigo-600 bg-[#ececf4] p-2.5 rounded-xl pt-1"
+              class="font-extrabold text-4xl font-sans pb-0 text-indigo-600 bg-[#ececf4] p-2.5 rounded-xl pt-1"
             >
               S
             </p>
@@ -134,30 +129,46 @@ export default {
       >
         <div class="flex gap-2 items-center">
           <img
-            v-if="lang === 'En'"
+            v-if="$i18n.locale === 'en'"
             src="../../../public/united-kingdom.png"
             height="32"
           />
           <img
-            v-if="lang === 'فارسی'"
+            v-if="$i18n.locale === 'fa'"
             src="../../../public/flag.png"
             width="32"
           />
-          <select
-            v-model="lang"
-            class="border-none bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl cursor-pointer"
-          >
-            <option>En</option>
-            <option>فارسی</option>
-          </select>
+          <div class="border-none flex cursor-pointer">
+            <div
+              @click="onLangClick"
+              :class="{
+                'ml-2 dark:text-primary-light': $i18n.locale === 'fa',
+                'bg-primary-light hover:bg-gray-200 hover:dark:text-black':
+                  $i18n.locale === 'en',
+              }"
+              class="p-2 rounded-xl hover:bg-gray-100 hover:dark:text-black"
+            >
+              En
+            </div>
+            <div
+              @click="onLangClick"
+              :class="{
+                'ml-2 dark:text-primary-light': $i18n.locale === 'en',
+                'bg-primary-light hover:bg-gray-200 hover:dark:text-black':
+                  $i18n.locale === 'fa',
+              }"
+              class="font-mikhak p-2 px-3 rounded-xl hover:bg-gray-100 hover:dark:text-black"
+            >
+              فا
+            </div>
+          </div>
         </div>
         <!-- Hire me button -->
         <div class="hidden md:block">
           <Button
-            title="Send Email"
-            class="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+            :title="$t('send-email')"
+            class="text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
             @click="showModal()"
-            aria-label="Hire Me Button"
           />
         </div>
 
@@ -169,14 +180,6 @@ export default {
         />
       </div>
     </div>
-
-    <!-- Hire me modal -->
-    <HireMeModal
-      :showModal="showModal"
-      :modal="modal"
-      :categories="categories"
-      aria-modal="Hire Me Modal"
-    />
   </nav>
 </template>
 

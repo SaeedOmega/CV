@@ -4,25 +4,27 @@
 const projects = [
   {
     id: 1,
-    title: "Omega Messenger",
+    title: "omega-messenger",
     category: "Web Application",
+    categoryShow: "web-application",
     img: require("@/assets/images/web-project-3.jpg"),
     path: "omegaMessenger",
   },
   {
     id: 2,
-    title: "Scrum Pocker",
+    title: "scrum-pocker",
     category: "Web Application",
+    categoryShow: "web-application",
     img: require("@/assets/images/web-project-6.jpg"),
     path: "scrumPocker",
   },
   {
     id: 3,
-    title: "ToDo List",
+    title: "todo-list",
     category: "Web Application",
+    categoryShow: "web-application",
     img: require("@/assets/images/web-project-9.jpg"),
     path: "toDo-List",
   },
 ];
-
 export default projects;

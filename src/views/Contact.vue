@@ -13,7 +13,7 @@ export default {
       contacts: [
         {
           id: 1,
-          name: "North Bahonar St - North Bahonar 8 Ave - Number 176, Neyshabur City, Iran",
+          name: "address",
           icon: "map-pin",
         },
         {
@@ -41,6 +41,7 @@ export default {
 
 <template>
   <div
+    :dir="$i18n.locale === 'fa' ? 'rtl' : 'ltr'"
     class="container mx-auto flex flex-col-reverse md:flex-row py-5 md:py-10 md:mt-10"
   >
     <!-- Contact form -->

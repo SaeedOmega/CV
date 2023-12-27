@@ -1,7 +1,8 @@
 <script>
 import feather from "feather-icons";
-import AppHeader from "./components/shared/AppHeader";
+import AppHeader from "./components/shared/AppHeader.vue";
 import AppFooter from "./components/shared/AppFooter";
+import { useI18n } from "vue-i18n";
 
 export default {
   components: {
@@ -9,7 +10,9 @@ export default {
     AppFooter,
   },
   data: () => {
+    const i18n = useI18n();
     return {
+      lang: i18n.locale,
       appTheme: localStorage.getItem("theme"),
     };
   },
@@ -23,7 +26,7 @@ export default {
 </script>
 
 <template>
-  <div :class="appTheme" class="pt-0.5">
+  <div :class="[appTheme]" class="pt-0.5 font-mikhak">
     <!-- App header -->
     <AppHeader />
 
