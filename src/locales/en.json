@@ -40,7 +40,7 @@
   "objective": "Objective",
   "objective-description-todolist": "The purpose of writing this project was to practice more and learn state management for React, which I think turned out to be a good job.",
   "tools-and-technologies": "Tools & Technologies",
-  "share-this": "Share This",
+  "share-this": "Related Links",
   "challenge": "Challenges",
   "todolist-challenge-line-1": "This project was not a special challenge for me because I had memorized all its topics, but to practice the state management, I started such a project.",
   "todolist-challenge-line-2": "The only new thing for me in this project was the use of Zastand's state management library, which is really similar to Pinia in the Vue framework, and at the same time, it is very simple and efficient.",
