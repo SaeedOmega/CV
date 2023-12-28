@@ -1,6 +1,12 @@
 <script>
 export default {
   props: ["showModal", "isOpen"],
+  methods: {
+    onLangClick(event) {
+      this.$i18n.locale = event.target.innerText === "En" ? "en" : "fa";
+      localStorage.lang = this.$i18n.locale;
+    },
+  },
   data() {
     return {
       lang: this.$i18n.locale === "en" ? "En" : "فا",
@@ -42,30 +48,44 @@ export default {
     <div
       class="border-t-2 mt-2 flex sm:hidden flex-row-reverse items-center justify-end pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark"
     >
-      <div
-        :class="[lang !== 'En' ? 'mr-5' : 'ml-5']"
-        class="flex gap-2 items-center"
-      >
+      <div class="flex gap-2 m-2 items-center">
         <img
-          v-if="lang === 'En'"
+          v-if="$i18n.locale === 'en'"
           src="../../../public/united-kingdom.png"
           height="32"
         />
         <img
-          v-if="lang === 'فا'"
+          v-if="$i18n.locale === 'fa'"
           src="../../../public/flag.png"
           width="32"
         />
-        <select
-          v-model="lang"
-          class="border-none bg-primary-light dark:bg-ternary-dark shadow-sm rounded-xl cursor-pointer"
-        >
-          <option>En</option>
-          <option class="font-mikhak">فا</option>
-        </select>
+        <div class="border-none flex cursor-pointer">
+          <div
+            @click="onLangClick"
+            :class="{
+              'ml-2 dark:text-primary-light': $i18n.locale === 'fa',
+              'bg-primary-light hover:bg-gray-200 hover:dark:text-black':
+                $i18n.locale === 'en',
+            }"
+            class="p-2 rounded-xl hover:bg-gray-100 hover:dark:text-black"
+          >
+            En
+          </div>
+          <div
+            @click="onLangClick"
+            :class="{
+              'ml-2 dark:text-primary-light': $i18n.locale === 'en',
+              'bg-primary-light hover:bg-gray-200 hover:dark:text-black':
+                $i18n.locale === 'fa',
+            }"
+            class="font-mikhak p-2 px-3 rounded-xl hover:bg-gray-100 hover:dark:text-black"
+          >
+            فا
+          </div>
+        </div>
       </div>
       <button
-        class="text-left text-md font-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 duration-500"
+        class="text-start rounded-md text-md font-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm px-4 py-2 duration-500"
         @click="showModal()"
         aria-label="Hire Me Button"
       >
