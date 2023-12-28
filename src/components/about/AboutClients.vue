@@ -38,7 +38,9 @@ export default {
     >
       {{ $t(clientsHeading) }}
     </p>
-    <div class="flex mt-10 sm:mt-14 gap-14 justify-center">
+    <div
+      class="flex mt-10 md:flex-row flex-col items-center sm:mt-14 gap-14 md:justify-center"
+    >
       <AboutClientSingle
         v-for="client in clients"
         :key="client.id"
