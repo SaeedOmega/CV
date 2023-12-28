@@ -132,7 +132,7 @@ export function getProject(param) {
           {
             id: 3,
             title: "website",
-            details: "github.com/SaeedOmega/scrumPocker",
+            details: "www.scrumPocker.ir",
           },
           {
             id: 4,
@@ -226,7 +226,7 @@ export function getProject(param) {
           {
             id: 3,
             title: "website",
-            details: "www.ToDo-List.ir",
+            details: "www.Saeed-ToDo-List.liara.run",
           },
           {
             id: 4,
