@@ -89,7 +89,7 @@ export function getProject(param) {
             id: 2,
             name: "GitHub",
             icon: "github",
-            url: "https://github.com/SaeedOmega",
+            url: "https://github.com/SaeedOmega/OmgeaMessenger-Vue.js",
           },
         ],
       },
