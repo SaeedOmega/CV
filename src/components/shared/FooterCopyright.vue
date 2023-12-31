@@ -16,7 +16,7 @@ export default {};
         })
       }}.
       <a
-        href="https://github.com/realstoman/vuejs-tailwindcss-portfolio"
+        href="https://github.com/SaeedOmega/CV"
         target="__blank"
         style="font-variation-settings: 'wght' 500"
         class="font-medium hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 duration-500"
@@ -25,7 +25,7 @@ export default {};
       </a>
       . {{ $t("developed-by") }}
       <a
-        href="https://stoman.me"
+        href="https://Saeed-Saadatifar.ir"
         target="__blank"
         :class="[$i18n.locale === 'en' ? 'ml-1' : 'mr-1']"
         style="font-variation-settings: 'wght' 500"
