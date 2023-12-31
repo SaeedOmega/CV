@@ -13,16 +13,19 @@ export default {
           id: 1,
           title: "Click",
           img: require("@/assets/images/brands/click.png"),
+          link: "https://clickmis.net/",
         },
         {
           id: 2,
           title: "Virasty",
           img: require("@/assets/images/brands/virasty.jpg"),
+          link: "https://virasty.com/",
         },
         {
           id: 3,
           title: "Gap",
           img: require("@/assets/images/brands/gap-messanger.jpg"),
+          link: "https://gap.im/",
         },
       ],
     };
