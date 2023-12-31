@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div>
-    <a :href="client.link"
+    <a :href="client.link" target="_blank"
       ><img
         :src="client.img"
         :alt="client.title"
